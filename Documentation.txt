@@ -1,0 +1,17 @@
+Documentation
+
+To use the script and configure the backup settings, follow these steps:
+
+1. Copy the Python script to the desired directory on the server.
+
+2. Create a 'backup_config.ini' file and configure the settings for each directory you want to include in the backup. Make sure to keep the '[Global]' section for global settings.
+
+3. In the 'backup_config.ini' file, replace '/path/to/backup/storage' with the path to the directory where you want to store all the backups.
+
+4. Set the 'max_backups' value in the '[Global]' section to the desired number of backups you want to retain. For example, if you set 'max_backups' to 5, the script will keep the most recent 5 backups and automatically delete the oldest ones if you exceed this value.
+
+5. In the '[Directory1]', '[Directory2]', and other sections, add the complete paths to the directories you want to include in the backup.
+
+6. Ensure that you have write permissions for the directory specified in '[Global] destination' to allow the script to create backups there.
+
+To run the script as a scheduled task (cron job on Linux or Task Scheduler on Windows), open the corresponding task scheduling program and create a new task to run the script at the desired intervals.
